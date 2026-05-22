@@ -1,0 +1,13 @@
+[Unit]
+Description = Voicepeak API Service
+After = network.target
+
+[Service]
+WorkingDirectory = /home/user/voicepeak_api
+EnvironmentFile = /home/user/voicepeak_api/.env
+ExecStart = /home/user/voicepeak_api/voicepeak_api
+Restart = always
+User = user
+
+[Install]
+WantedBy = multi-user.target
